@@ -17,12 +17,23 @@
  */
 
 // 객체 리터럴 방식을 활용한 객체 생성
+const dog = {
+    age : 2,
+    name : 'toto'
+};
 
 
 // 프로퍼티 조회(접근)
+// age, name을 프로퍼티라고 한다.
+console.log(dog.age);
 
 
+// 보통 선언 때 모든 프로퍼티 만들고, 추가 및 삭제 등의 변경은 잘 안한다.
 // 프로퍼티 동적 추가, (존재하지 않는 프로퍼티에 값을 할당하면 추가됨.)
-
+dog.color = 'brown';
+console.log(dog.color);
+console.log(dog);
 
 // 프로퍼티 삭제(delete 연산자, 잘 사용하지 않음, 왜?)
+delete(dog.color);
+console.log(dog);
