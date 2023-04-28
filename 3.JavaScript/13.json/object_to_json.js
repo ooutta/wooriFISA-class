@@ -24,9 +24,23 @@ const book = {
     genere: ["novel", "essay"],
 }
 
+// 직렬화 
+console.log(book); //프로퍼티 접근 가능
+const jsonData = JSON.stringify(book); // string으로 문자열화
+console.log(jsonData); 
+
+// 역직렬화
+const parsedData = JSON.parse(jsonData);
+console.log(parsedData);
+
+
 // 배열
 const books = [
     { id: 1, title: "하농", author: "하농", isSold: false },
     { id: 2, title: "체르니", author: "체르니", isSold: true },
     { id: 3, title: "부르크뮐러", author: "부르크뮐러", isSold: true },
 ]
+
+console.log(books);
+const jsonData2 = JSON.stringify(books);
+console.log(jsonData2);

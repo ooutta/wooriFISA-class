@@ -15,7 +15,8 @@ function setColor(numberStatus, convertNumber) {
 
 function decrease() {
     const numberStatus = document.getElementById('number-status');
-    const stringToIntNumberDecrease = Number(numberStatus.textContent) -1;
+    const stringToIntNumberDecrease = numberStatus.textContent -1; // Number 안해줘도 string to int 된다.
+    // const stringToIntNumberDecrease = Number(numberStatus.textContent) -1;
     display(numberStatus, stringToIntNumberDecrease);
 }
 

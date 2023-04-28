@@ -10,19 +10,19 @@
  * 
  */
 
-function sum(x, y) {
+export function sum(x, y) { // 외부 사용 허용을 위해 export 키워드 사용
   return x + y;
 }
 
-function sub(x, y) {
+export function sub(x, y) {
   return x - y;
 }
 
-function mul(x, y) {
+export function mul(x, y) {
   return x * y;
 }
 
-function division(x, y) {
+export function division(x, y) {
   return x / y;
 }
 
@@ -42,3 +42,5 @@ class Book {
     this.author = author
   }
 }
+
+// export {sum, sub, mul, division};
