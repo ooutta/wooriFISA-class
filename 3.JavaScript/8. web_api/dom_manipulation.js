@@ -17,5 +17,10 @@ console.log(liList, typeof liList);
 console.log([1,2,3], typeof [1,2,3]);
 console.log(liList);
 
+const test = document.querySelector('ul li:first-of-type');
+console.log(test);
 console.log(document.querySelector('ul li:first-of-type'));
+console.log(document.querySelectorAll('ul li'));
+// console.log(document.querySelector('ul li:nth-of-type(1)').textContent);  // Item1
+// console.log(document.querySelector('ul li:nth-of-type(2)').textContent); // Item2
 // querySelectAll(); ->전체 선택해서 가져오기

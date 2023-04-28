@@ -5,6 +5,8 @@ const author = 'Saint-Exupery';
 console.log(`My favorite nobel is ${novel} 
 by ${author}.`); // 변수 동적 바인딩, 줄바꿈 가능
 
+console.log('My favorite nobel is ' + novel + '\nby ' + author + '.');
+
 const address =
   'Homer J. Simpson\n' +
   '742 Evergreen Terrace\n' +
