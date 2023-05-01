@@ -10,7 +10,7 @@ let targetLanguage = 'en'; // 번역될 언어의 타입, 초기값은 en(Englli
 //변역될 언어의 타입 변경 이벤트
 // English면 en 출력, 한국어면 ko 출력되도록
 targetSelect.addEventListener('change', (event) => {
-    // console.log(event.target.value); // select 박스의 option ㅐㅌ그 내 value 어트리뷰트 값을 취득
+    // console.log(event.target.value); // select 박스의 option 태그 내 value 어트리뷰트 값을 취득
     targetLanguage = event.target.value;
 
 })
@@ -36,10 +36,7 @@ sourceTextArea.addEventListener('input', (event) => {
         console.log(result);
 
         translateLanguage(result, text);
-
     }, 2000); // 2초 후에 콜백 함수 동작
-    
-    
 });
 
 
@@ -59,12 +56,13 @@ const detectLanguage = async (text) => {
         body: JSON.stringify({query: text}),
     }
 
-
     await fetch(url, body) // axios 라이브러리 사용 시 json 처리 추상화
     .then(response => response.json())
     .then(data => {
         sourceLanguage = data.langCode;
+        changeLanguage(sourceLanguage);
         sourceSelect.value = sourceLanguage;
+        targetSelect.value = targetLanguage;
     })
     .catch(error => console.error(error));
     
@@ -75,6 +73,7 @@ const translateLanguage = async (sourceLanguage, text) => {
     // 언어 번역 요청
     const translateUrl = '/translate';
     
+
     const body = {
         source: sourceLanguage, 
         target: targetLanguage, 
