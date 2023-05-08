@@ -1,11 +1,19 @@
 <template>
-  <button>전환</button>
+  <!-- <button @click="clickHandler">전환</button> -->
+
+  <!-- html 안에서 값 변경할 경우에는 awesome의 value 안 써줘도 됨 -->
+  <button @click=" awesome = !awesome">한줄로 전환</button>
   
-  <h1 >Vue is awesome! 😀</h1>
-  <h1 >isn't? 😢</h1>
+  <h1 v-if="awesome">Vue is awesome! 😀</h1>
+  <h1 v-else>isn't? 😢</h1>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
+const awesome = ref(true); // 내부적으로 { value: true }로 래핑됨
+
+const clickHandler = () => awesome.value = !awesome.value;
 
 </script>
 

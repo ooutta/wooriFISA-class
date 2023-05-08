@@ -1,15 +1,23 @@
 <template>
     <form>
+        <!-- 
+            비밀번호의 자리수가 4글자 미만에면 Weak
+            7글자 미만이면 Faily Strong
+            그 이상이면 Strong이 출력되도록
+        -->
+
         <label for="password">비밀번호</label>
-        <input placeholder="비밀번호를 입력하세요" id="password"/>
-        <p class="weak" >Weak Password</p>
-        <p class="fairly-strong" >Fairly Strong Password</p>
-        <p class="strong" >Strong Password</p>
+        <input v-model="searchQuery" placeholder="비밀번호를 입력하세요" id="password"/>
+        <p class="weak" v-if="searchQuery.length < 4">Weak Password</p>
+        <p class="fairly-strong" v-else-if="searchQuery.length < 7">Fairly Strong Password</p>
+        <p class="strong" v-else>Strong Password</p>
     </form>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+
+const searchQuery = ref('');
 
 </script>
 
