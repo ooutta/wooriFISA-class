@@ -1,0 +1,19 @@
+/* 직접 같이 타이핑하여 학습 */
+/* html, body 모두 height 100%로 설정해줘야 
+브라우저의 전체 화면을 영역 범위로 설정할 수 있음*/
+html, body {
+    height: 100%;
+}
+.height-default {
+    border: 2px solid greenyellow;
+}
+
+.height-px {
+    height: 300px;
+    border: 2px dashed orange;
+}
+
+.height-pct {
+    height: 50%;
+    border: 2px dashed tomato;
+}
