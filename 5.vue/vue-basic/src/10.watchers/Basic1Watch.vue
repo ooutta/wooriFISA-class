@@ -1,7 +1,7 @@
 <template>
     <button @click="x += 1">x값 1 증가</button>
     <div>x: {{ x }}</div>
-    <button>y값 1 증가</button>
+    <button @click="y += 1">y값 1 증가</button>
     <div>y: {{ y }}</div>
 </template>
 
@@ -16,13 +16,17 @@ import { ref, watch } from 'vue';
     watch(x, (newX) => console.log(`x 값: ${newX}`));
     watch(x, (newX, oldX) => console.log(`newX: ${newX}, oldX: ${oldX}`));
 
+    // y에 대해 변경된 값 newY를 출력
+    watch(y, (newY) => console.log(`y 값: ${newY}`));
+    watch(y, (newY, oldY) => console.log(`newY: ${newY}, oldY: ${oldY}`));
+
     // 함수형 방식
-    watch(() => x.value, (newX) => console.log(`x: ${newX}`));
+    // watch(() => x.value, (newX) => console.log(`x: ${newX}`));
 
     
 
     watch([x, y], (newValues, oldValues) => {
-        console.log(`newValues: ${newValues}, oldValues: ${oldValues}`);
+        console.log(`newValues: ${newValues} / oldValues: ${oldValues}`);
 
         console.log(`newValues of X: ${newValues[0]}`);
         console.log(`newValues of Y: ${newValues[1]}`);

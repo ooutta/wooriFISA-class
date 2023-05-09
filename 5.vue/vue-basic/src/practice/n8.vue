@@ -21,7 +21,8 @@ function removeTodo(todo) {
 }
   
 const filteredTodos = computed(() => {
-  return hideCompleted.value ? todos.value.filter((t) => !t.done) : todos.value;
+  // return hideCompleted.value ? todos.value.filter((t) => !t.done) : todos.value;
+  return hideCompleted.value ? todos.value.filter((t) => t.done === false) : todos.value
 })
 </script>
 

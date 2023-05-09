@@ -45,8 +45,9 @@
     </select>
     <span>Selected: {{ selected }}</span>
 
+    <!-- 다중 선택. 배열로 바인딩 됨 -->
     <h2>6. Multi Select</h2>
-    <select v-model="multiSelected" style="width:100px">
+    <select v-model="multiSelected" multiple style="width:100px">
         <option>A</option>
         <option>B</option>
         <option>C</option>
