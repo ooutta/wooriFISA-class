@@ -1,7 +1,13 @@
 <template>
     <div>
-        <ul>
-            '??'
+        <ul v-for="item in items" :key="item.id">
+            <li>
+                <h3>{{ item.name }}</h3>
+                <ul> <!-- 이 부분 ul, li 안쓰고 div로 하는 게 더 나음 -->
+                    <li>설명 : {{ item.details.description }}</li>
+                    <li><span>가격: {{ item.details.price }}원</span></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </template>

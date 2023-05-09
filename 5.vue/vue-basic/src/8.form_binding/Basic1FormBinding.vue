@@ -1,24 +1,25 @@
 <template>
     <h2>1. Text Input</h2>
-    <input> <span>{{ text }}</span><br/>
+    <input v-model.trim="text"> <span>{{ text }}</span><br/>
     <!-- trim modifier: 공백 자동 제거 -->
 
-    <input type="number"> <span>{{ typeof age }}</span><br/>
-    <input type="text"> <span>{{ typeof age }}</span><br/>
+    <!-- type을 number로 하면ㄴ 값을 증감소하는 화살표 버튼이 생겨 잘 안씀 -->
+    <input v-model="age" type="number"> <span>{{ typeof age }}</span><br/>
+    <input v-model.number="age" type="text"> <span>{{ typeof age }}</span><br/>
     <!-- number modifier: 숫자 값으로 자동 변환 -->
     <hr>
     <h2>2. Checkbox</h2>
-    <input type="checkbox" id="checkbox">
+    <input type="checkbox" id="checkbox" v-model="checked">
     <label for="checkbox">Checked: <span>{{ checked }}</span></label>
     <hr>
     <!--
     multiple checkboxes can bind to the same array v-model value -->
     <h2>3. Multi Checkbox</h2>
-    <input type="checkbox" id="jack" value="Jack">
+    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
     <label for="jack">Jack</label>
-    <input type="checkbox" id="john" value="John">
+    <input type="checkbox" id="john" value="John" v-model="checkedNames">
     <label for="john">John</label>
-    <input type="checkbox" id="mike" value="Mike">
+    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
     <label for="mike">Mike</label>
 
     <p>Checked names:
@@ -27,16 +28,16 @@
 
     <hr>
     <h2>4. Radio</h2>
-    <input type="radio" id="one" value="One">
+    <input type="radio" id="one" value="One" v-model="picked">
     <label for="one">One</label>
     <br>
-    <input type="radio" id="two" value="Two">
+    <input type="radio" id="two" value="Two" v-model="picked">
     <label for="two">Two</label>
     <br>
     <span>Picked: {{ picked }}</span>
     <hr>
     <h2>5. Select</h2>
-    <select>
+    <select v-model="selected">
         <option disabled value="">Please select one</option>
         <option>A</option>
         <option>B</option>
@@ -45,7 +46,7 @@
     <span>Selected: {{ selected }}</span>
 
     <h2>6. Multi Select</h2>
-    <select style="width:100px">
+    <select v-model="multiSelected" style="width:100px">
         <option>A</option>
         <option>B</option>
         <option>C</option>

@@ -2,18 +2,24 @@
 import { ref } from 'vue'
 
 // 1. without Event modifier(Plain JS way)
+const clickHandler = (event) => { // event -> e
+    event.preventDefault(); // 해당 이벤트 객체가 가진 기본 동작 비활성화
+}
 
 // 2. Vue Event modifier 활용
+const submitHandler = () => console.log('called');
 
 </script>
 
 <template>
-    <form>
+    <!-- prevent가 modifier이다.-->
+    <form @submit.prevent="submitHandler">
         <label for="fname">First name:</label>
         <input type="text" id="fname" name="fname">
         <label for="lname">Last name:</label>
         <input type="text" id="lname" name="lname">
         <input type="submit" value="Submit">
+        <input type="submit" value="Submit" @click="clickHandler">
     </form>
 </template>
 

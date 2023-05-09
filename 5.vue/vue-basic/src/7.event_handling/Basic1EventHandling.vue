@@ -3,10 +3,11 @@ import { ref } from 'vue'
 
 const count = ref(0);
 
+
 </script>
 
 <template>
-    <button>Add</button>
+    <button @click="count++">Add</button>
     <p>Count is: {{ count }}</p>
 </template>
 
