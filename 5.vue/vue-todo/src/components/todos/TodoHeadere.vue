@@ -29,16 +29,28 @@ import TodoFilter from './TodoFilter.vue';
 import NewTodo from './NewTodo.vue'
 import { ref } from 'vue';
 
+
+
+// todoStore.filterTodo()
+
 const isModalOpen = ref(false);
 
 const openModal = () => isModalOpen.value = true;
 const closeModal = () => isModalOpen.value = false;
+
+
 
 const emit = defineEmits(['add-todo']);
 
 const addTodo = (todo) => {
     emit('add-todo', todo);
 }
+
+// openModal()을 TodoItem으로 보내기
+
+
+
+
 </script>
 
 <style lang="scss" scoped>
