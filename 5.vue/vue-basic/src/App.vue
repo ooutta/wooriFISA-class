@@ -42,6 +42,9 @@ import Basic2WatchPractice from './10.watchers/Basic2WatchPractice.vue';
 import Basic3WatchNWatchEffect from './10.watchers/Basic3WatchNWatchEffect.vue';
 import Basic4UsingWatchEffect from './10.watchers/Basic4UsingWatchEffect.vue';
 
+// practice
+import N4 from './practice/n4.vue'
+
 </script>
 
 <template>
@@ -80,7 +83,7 @@ import Basic4UsingWatchEffect from './10.watchers/Basic4UsingWatchEffect.vue';
   <!-- 9. lifecycle hooks -->
   <!-- Lifecycle은 HomeView에서 진행 -->
 
-  <nav>
+  <!-- <nav>
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/about">About</RouterLink>
   </nav>
@@ -89,13 +92,18 @@ import Basic4UsingWatchEffect from './10.watchers/Basic4UsingWatchEffect.vue';
     <KeepAlive>
       <component :is="Component" />
     </KeepAlive>
-  </RouterView>
+  </RouterView> -->
 
   <!-- 10. watchers -->
   <!-- <Basic1Watch /> -->
   <!-- <Basic2WatchPractice /> -->
   <!-- <Basic3WatchNWatchEffect /> -->
   <!-- <Basic4UsingWatchEffect /> -->
+
+
+<!-- practice -->
+<N4 />
+
 </template>
 
 <style scoped>
