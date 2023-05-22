@@ -33,7 +33,7 @@ import Basic2EventModifier from './7.event_handling/Basic2EventModifier.vue'
 import Basic1FormBinding from './8.form_binding/Basic1FormBinding.vue';
 
 // 9. life cycle
-// import { KeepAlive } from 'vue';
+import { KeepAlive } from 'vue';
 // HomeView에서 진행
 
 // 10. watchers
@@ -83,7 +83,7 @@ import N4 from './practice/n4.vue'
   <!-- 9. lifecycle hooks -->
   <!-- Lifecycle은 HomeView에서 진행 -->
 
-  <!-- <nav>
+  <nav>
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/about">About</RouterLink>
   </nav>
@@ -92,7 +92,7 @@ import N4 from './practice/n4.vue'
     <KeepAlive>
       <component :is="Component" />
     </KeepAlive>
-  </RouterView> -->
+  </RouterView>
 
   <!-- 10. watchers -->
   <!-- <Basic1Watch /> -->
@@ -102,7 +102,7 @@ import N4 from './practice/n4.vue'
 
 
 <!-- practice -->
-<N4 />
+<!-- <N4 /> -->
 
 </template>
 

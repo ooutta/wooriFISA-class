@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "target": "ES2016",
+    "noEmitOnError": true, // ts 파일에 에러 있으면 tsc 해도 js 파일 생성 안됨 
+    "strict": true // 함수의 매개변수에 undefined를 검출
+  }
+}
