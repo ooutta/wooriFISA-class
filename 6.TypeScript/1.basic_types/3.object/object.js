@@ -5,6 +5,9 @@ const dog = {
         console.log('강아지가 걷는다');
     }
 };
+// const dog: object = {};
+// const dog: Object = {};
+// const dog: {} = {};
 console.log(dog.age);
 // dog.color = 'brown'; // js에서는 됐지만 ts에서는 불가능
 // 프로퍼티 동적 추가 불가능 - 타입스크립트는 일반적으로 정적 타입 시스템 기반이기때문에
@@ -35,3 +38,12 @@ secondCookie = {
     company: 'HERSHEY'
 };
 console.log(firstCookie);
+//==== 추가 주제.
+// 위에서 사용한 dog는 타입이 object가 아니라 { age: number, name: string, walk: () => void } 타입임
+const mouse = {
+    age: 2,
+    name: 'jerry'
+};
+// console.log(mouse.age); // mouse의 타입이 { age: number, name: string }이 아닌, object로 추론하고 있기 때문에 접근 불가.
+// Object vs object vs {} ? - 직접 검색 후 학습
+// https://www.typescriptlang.org/ko/docs/handbook/2/functions.html#object

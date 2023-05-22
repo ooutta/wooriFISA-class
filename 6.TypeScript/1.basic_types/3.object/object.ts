@@ -67,7 +67,7 @@ const mouse: object = {
     name: 'jerry'
 };
 
-console.log(mouse.age); // mouse의 타입이 { age: number, name: string }이 아닌, object로 추론하고 있기 때문에 접근 불가.
+// console.log(mouse.age); // mouse의 타입이 { age: number, name: string }이 아닌, object로 추론하고 있기 때문에 접근 불가.
 
 // Object vs object vs {} ? - 직접 검색 후 학습
 // https://www.typescriptlang.org/ko/docs/handbook/2/functions.html#object
